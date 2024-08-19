@@ -25,4 +25,4 @@ jobs:
     - name: Push to Docker Hub
       run: |
         docker tag deploy-test ${{ secrets.muatib }}/deploy-test:latest
-        docker push ${{ secrets.Fisherman2829 }}/deploy-test:latest
+        docker push ${{ secrets.muatib }}/deploy-test:latest
