@@ -14,7 +14,7 @@ jobs:
     - name: Test application
       run: |
         docker run --name test-container -d -p 8088:80 deploy-test .
-        sleep 5
+        sleep 20
         curl --retry 5 --retry-delay 5 http://localhost:8088 | grep "Hello, CI/CD!"
         docker stop test-container
     - name: Login to Docker Hub
