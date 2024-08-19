@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker image
-      run: docker build -t myapp .
+      run: docker build -t muatib/deploy-test .
     - name: Test application
       run: |
         docker run --name test-container -d -p 8080:80 myapp:${{ github.sha }}
